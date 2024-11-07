@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriHelper - Mejorado</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Incluir Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>AgriHelper</h1>
+    <p>Tu asistente agrícola interactivo</p>
+  </header>
+
+  <main>
+    <!-- Información del clima -->
+    <section id="weather">
+      <h2>Clima Actual</h2>
+      <div id="weather-info">
+        <p>Cargando...</p>
+      </div>
+    </section>
+
+    <!-- Gestión de cultivos -->
+    <section id="crops">
+      <h2>Mis Cultivos</h2>
+      <ul id="crop-list"></ul>
+      <form id="crop-form">
+        <input type="text" id="crop-name" placeholder="Nombre del cultivo" required>
+        <button type="submit">Añadir Cultivo</button>
+      </form>
+    </section>
+
+    <!-- Recordatorios de riego -->
+    <section id="reminders">
+      <h2>Recordatorios de Riego</h2>
+      <ul id="reminder-list"></ul>
+      <form id="reminder-form">
+        <input type="text" id="reminder-crop" placeholder="Cultivo para riego" required>
+        <input type="date" id="reminder-date" required>
+        <button type="submit">Añadir Recordatorio</button>
+      </form>
+    </section>
+
+    <!-- Mapa interactivo -->
+    <section id="map">
+      <h2>Ubicación de Cultivos</h2>
+      <div id="mapid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 AgriHelper</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Incluir Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>
